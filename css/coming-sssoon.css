@@ -666,7 +666,10 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
 
     -webkit-transition: background-image 2s ease-in-out;
     -moz-transition   : background-image 2s ease-in-out;
+    -o-transition   : background-image 2s ease-in-out;
+    -ms-transition   : background-image 2s ease-in-out;
     transition        : background-image 2s ease-in-out;
+    
 }
 .cover{
     position: fixed;

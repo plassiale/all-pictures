@@ -1,9 +1,12 @@
 $(document).ready(function() {
 
     var backgrounds = [
-      'url(images/fraise.jpg)',
-      'url(images/new-york.jpg)',
-      'url(images/road-movie.jpg)'
+      'images/fraise.jpg',
+      'images/new-york.jpg',
+      'images/road-movie.jpg',
+      'images/autour_du_vent.jpg',
+      'images/en_silence.jpg'
+
 
     ];
 
@@ -18,13 +21,13 @@ $(document).ready(function() {
 
         $('.main').css(
          'background-image',
-          backgrounds[current]
+          'url(' + backgrounds[current] + ')'
        );
 
-       setTimeout(nextBackground, 8000);
+       setTimeout(nextBackground, 10000);
    };
 
-   setTimeout(nextBackground, 4000);
+   setTimeout(nextBackground, 6000);
 
   $( ".form-inline" ).submit(function( event ) {
 
@@ -84,4 +87,12 @@ $(document).ready(function() {
     $(".form-inline  input[required=true]").keyup(function() {
         $(this).css('border-color','');
     });
+
+    var images = new Array()
+     // start preloading
+     for(i=0; i<backgrounds.length; i++)
+     {
+          images[i] = new Image();
+          images[i].src=backgrounds[i];
+     }
 });
